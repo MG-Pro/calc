@@ -1,6 +1,7 @@
 let result = 0, operation, r = null, r2 = null;
 let arrNum = [];
-let resultElem = document.getElementById('result');
+const resultElem = document.getElementById('result');
+const buttonsList = document.getElementsByClassName('button');
 
 function num(custNum) {
   let x = arrNum.indexOf('.'); // нет . -> x=-1
@@ -55,7 +56,7 @@ function invers() {
 }
 
 function pseudoActive(val) {
-  let buttonsList = document.getElementsByClassName('button');
+
   for (let key of buttonsList) {
     if (key.innerText === val) {
       key.classList.toggle('active');
